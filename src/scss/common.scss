@@ -1,0 +1,92 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.left-side {
+    position: absolute;
+    z-index: 50;
+    width: 300%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(80);
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: calc(100% + rem(25));
+    @media (min-width: em(1439.98)) {
+        right: calc(100% + rem(65));
+    }
+    @media (max-width: em(1240)) {
+        right: calc(100% - rem(15));
+    }
+    @media (max-width: $mobile) {
+        display: none;
+    }
+    @media (max-height: $mobile) {
+        gap: rem(40);
+    }
+    &__item {
+        display: inline-block;
+        height: rem(80);
+        @media (max-height: $mobile) {
+            height: rem(40);
+        }
+        width: 100%;
+        background-color: $mainColor;
+        &_white {
+            background-color: $white-1;
+        }
+    }
+}
+
+.right-side {
+    z-index: 50;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(80);
+    left: calc(100% - rem(55));
+    @media (min-width: em(1439.98)) {
+        left: calc(100% + rem(25));
+    }
+    @media (max-width: em(1240)) {
+        left: auto;
+        right: rem(15);
+    }
+    @media (max-width: $mobile) {
+        display: none;
+    }
+    @media (max-height: $mobile) {
+        gap: rem(40);
+    }
+    &__line {
+        height: rem(80);
+        @media (max-height: $mobile) {
+            height: rem(40);
+        }
+        width: rem(1);
+        background-color: $white-1;
+        ._black & {
+            background-color: $mainColor;
+        }
+    }
+
+    &__icon {
+        font-size: rem(80);
+        color: $white-1;
+        @media (max-height: $mobile) {
+            transform: rotate(0.6);
+        }
+        ._black & {
+            color: $mainColor;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.text {
+    font-weight: 100;
+    @include adaptiveValue("font-size", 32, 24, 991.98, 320, 1);
+    line-height: math.div(48, 32);
+}
