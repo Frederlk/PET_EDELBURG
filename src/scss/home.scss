@@ -328,10 +328,11 @@
     }
 
     &__wrapper {
+        @media (min-width: em(820)) {
+            display: flex;
+            justify-content: flex-end;
+        }
         position: relative;
-        display: flex;
-        justify-content: flex-end;
-        gap: rem(60);
         background: $dark-1;
         box-shadow: 0px rem(90) rem(80) rem(-40) rgba(0, 0, 0, 0.5);
         &::after {
@@ -359,25 +360,35 @@
     }
 
     &__image-ibg {
+        @media (max-width: em(820)) {
+            display: none;
+        }
         position: absolute;
-        @include adaptiveValue("width", 1150, 990, 1240, 767.98, 1);
+        @include adaptiveValue("width", 1150, 500, 1240, 767.98, 1);
         height: 100%;
-        top: 0;
-        @include adaptiveValue("left", -320, -280, 1240, 991.98, 1);
+        bottom: 0;
+        @include adaptiveValue("left", -320, -120, 1240, 991.98, 1);
     }
 
     &__content {
         flex: 0 1 50%;
-        @media (max-width: em(1439.98)) {
-            padding-right: rem(100);
-        }
     }
 }
 .content-values {
     position: relative;
     z-index: 2;
     @include adaptiveValue("padding-top", 130, 60, 1439.98, 767.98, 1);
-    @include adaptiveValue("padding-bottom", 140, 70, 1439.98, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 140, 60, 1439.98, 767.98, 1);
+    @media (max-width: em(1439.98)) {
+        padding-right: rem(100);
+    }
+    @media (max-width: em(820)) {
+        padding-left: rem(40);
+    }
+    @media (max-width: $mobile) {
+        padding: rem(60) rem(0);
+    }
+
     color: $white-1;
     font-weight: 400;
     font-size: rem(16);
@@ -401,6 +412,10 @@
 
     &__sign {
         position: relative;
+        @media (max-width: $mobileSmall) {
+            display: flex;
+            flex-direction: column;
+        }
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 80, 40, 1439.98, 767.98, 1);
         }
@@ -408,14 +423,25 @@
             font-weight: 700;
         }
         img {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(0px, -50%);
+            @media (min-width: $mobileSmall) {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0px, -50%);
+            }
+            @media (max-width: $mobileSmall) {
+                margin: rem(10) auto 0 auto;
+            }
+            @include adaptiveValue("width", 160, 80, 1240, 479.98, 1);
         }
     }
 
     &__button {
-        min-width: rem(401);
+        @media (min-width: $mobileSmall) {
+            min-width: rem(400);
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
     }
 }
