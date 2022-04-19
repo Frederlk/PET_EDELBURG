@@ -1,3 +1,162 @@
-//====================================================================================================
+.footer {
+    background-color: $mainColor;
+    &__container {
+        position: relative;
+        gap: rem(20);
+        display: flex;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            gap: 0;
+        }
+        @media (min-width: $mobile) {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 300%;
+                height: 100%;
+                top: 0;
+                left: calc(100% - rem(15));
+                background-color: $dark-2;
+            }
+        }
+    }
 
-//====================================================================================================
+    &__info {
+        @include adaptiveValue("padding-top", 165, 60, 1439.98, 767.98, 1);
+        @include adaptiveValue("padding-bottom", 165, 40, 1439.98, 767.98, 1);
+    }
+
+    &__logo {
+        display: inline-flex;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 80, 20, 1439.98, 767.98, 1);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__body {
+        display: flex;
+        @include adaptiveValue("gap", 80, 20, 1439.98, 767.98, 1);
+        @media (max-width: em(550)) {
+            flex-direction: column;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 80, 20, 1439.98, 767.98, 1);
+        }
+    }
+
+    &__content {
+        @media (min-width: em(550)) {
+            flex: 0 1 rem(320);
+        }
+    }
+
+    &__address {
+        @include adaptiveValue("margin-bottom", 20, 10, 1439.98, 767.98, 1);
+    }
+
+    &__email {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
+        display: inline-flex;
+        @include adaptiveValue("margin-bottom", 20, 10, 1439.98, 767.98, 1);
+    }
+
+    &__phones {
+    }
+
+    &__phone-item {
+        &:not(:last-child) {
+            margin-bottom: rem(5);
+        }
+    }
+
+    &__phone-link {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &__main {
+        @media (min-width: em(550)) {
+            flex: 0 1 rem(320);
+        }
+        li {
+            margin-bottom: rem(5);
+        }
+    }
+
+    &__text {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &__copy {
+    }
+
+    &__labels {
+        position: relative;
+        z-index: 2;
+        background-color: $dark-2;
+        color: $white-1;
+        display: flex;
+        justify-content: center;
+        @include adaptiveValue("gap", 100, 40, 1439.98, 767.98, 1);
+        @media (min-width: em(1439.98)) {
+            margin-right: rem(-160);
+            min-width: rem(320);
+        }
+        @media (max-width: em(1439.98)) {
+            @include adaptiveValue("padding", 60, 20, 1439.98, 767.98, 1);
+        }
+        @media (max-width: $mobile) {
+            margin-right: rem(-15);
+        }
+        @media (min-width: $mobileSmall) {
+            flex-direction: column;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 0 rem(-15);
+        }
+    }
+
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &._icon-edelweiss_1 {
+            &::before {
+                @include adaptiveValue("font-size", 110, 55);
+            }
+        }
+        &._icon-podolgrad_1 {
+            &::before {
+                @include adaptiveValue("font-size", 50, 25);
+            }
+        }
+        &._icon-edeldorf_1 {
+            &::before {
+                @include adaptiveValue("font-size", 120, 60);
+            }
+        }
+    }
+}
+
+.footer-text {
+    font-weight: 300;
+    line-height: math.div(28, 16);
+    color: $white-1;
+}

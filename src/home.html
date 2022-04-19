@@ -19,7 +19,7 @@
                                 <h1 class="main-screen__title">Національний забудовник</h1>
                                 <div class="main-screen__text text">з іноземними інвестиціями</div>
                             </div>
-                            <a href="#" class="main-screen__scroll scroll-main-screen">
+                            <a href="#" data-goto=".page__about" class="main-screen__scroll scroll-main-screen">
                                 <span class="scroll-main-screen__line"></span>
                                 <div class="scroll-main-screen__button"><span></span></div>
                                 <span class="scroll-main-screen__line"></span>
@@ -64,11 +64,11 @@
                         </div>
 
                         <div class="about__content">
-                            <div class="about__top">
-                                <div class="about__text text">
+                            <div class="about__top top">
+                                <div class="top__text text">
                                     Ми будуємо Європу в Україні, маючи незаперечні переваги, що виділяють нас поміж інших.
                                 </div>
-                                <div class="about__side-text">We create the European lifestyle in Ukraine</div>
+                                <div class="top__side-text">We create the European lifestyle in Ukraine</div>
                             </div>
                             <div class="about__body">
                                 <div class="about__item item-about">
@@ -149,7 +149,7 @@
                     </div>
                 </section>
 
-                <section class="page__about about">
+                <section class="page__about page__about_second about">
                     <div class="about__container">
                         <div class="about__left-side left-side">
                             <span class="left-side__item"></span>
@@ -184,6 +184,168 @@
                             <div class="right-side__icon _icon-edeldorf_2"></div>
                             <div class="right-side__icon _icon-podolgrad_2"></div>
                             <span class="right-side__line"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__innovations innovations">
+                    <div class="innovations__container">
+                        <div class="innovations__left-side left-side">
+                            <span class="left-side__item"></span>
+                            <span class="left-side__item"></span>
+                            <span class="left-side__item"></span>
+                        </div>
+
+                        <div class="innovations__content">
+                            <div class="innovations__info">
+                                <div class="innovations__text text">
+                                    Інноваційність та безпека — ключові фактори технологічних рішень. «Розумний дім» у кожній
+                                    квартирі.
+                                </div>
+                                <div class="innovations__cards">
+                                    <article class="innovations__card card-innovations">
+                                        <div class="card-innovations__icon _icon-temperature"></div>
+                                        <h3 class="card-innovations__title">Управління кліматом</h3>
+                                    </article>
+                                    <article class="innovations__card card-innovations">
+                                        <div class="card-innovations__icon _icon-settings"></div>
+                                        <h3 class="card-innovations__title">Керування жалюзами та ролетами</h3>
+                                    </article>
+                                    <article class="innovations__card card-innovations">
+                                        <div class="card-innovations__icon _icon-scale"></div>
+                                        <h3 class="card-innovations__title">Управління звуком</h3>
+                                    </article>
+                                    <article class="innovations__card card-innovations">
+                                        <div class="card-innovations__icon _icon-eye"></div>
+                                        <h3 class="card-innovations__title">Датчики руху та система безпеки</h3>
+                                    </article>
+                                </div>
+                                <a href="#" class="innovations__button button">
+                                    Детальніше про систему розумний дім<span></span
+                                ></a>
+                            </div>
+                            <div class="innovations__phone">
+                                <img src="@img/phone.png" alt="Телефон" />
+                            </div>
+                        </div>
+
+                        <div class="innovations__right-side right-side _black">
+                            <span class="right-side__line"></span>
+                            <div class="right-side__icon _icon-edelweiss_2"></div>
+                            <div class="right-side__icon _icon-edeldorf_2"></div>
+                            <div class="right-side__icon _icon-podolgrad_2"></div>
+                            <span class="right-side__line"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__catalog catalog">
+                    <div class="catalog__header">
+                        <div class="catalog__container catalog__container_header">
+                            <div class="catalog__left-side left-side">
+                                <span class="left-side__item left-side__item_white"></span>
+                                <span class="left-side__item left-side__item_white"></span>
+                                <span class="left-side__item left-side__item_white"></span>
+                            </div>
+
+                            <div class="catalog__top top">
+                                <div class="top__text text">
+                                    Житло від Development — це бездоганність форми та змісту у кожному квадратному метрі.
+                                </div>
+                                <div class="top__side-text">FIND Out MORE ABOUT PROJECTS DEVELOPED BY OUR COMPANY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__body">
+                        <div class="catalog__container">
+                            <div class="catalog__cards">
+                                <article class="catalog__card card-catalog">
+                                    <a href="#" class="card-catalog__image-ibg _icon-edelweiss_1">
+                                        <img src="@img/other-pics/1.jpg" alt="Edelweiss Haus" />
+                                    </a>
+                                    <ul class="card-catalog__list">
+                                        <li class="card-catalog__item _icon-location">Київ, Україна</li>
+                                        <li class="card-catalog__item _icon-building">Житловий комплекс</li>
+                                        <li class="card-catalog__item _icon-premium">Преміум-клас</li>
+                                        <li class="card-catalog__item _icon-time">Будується</li>
+                                    </ul>
+                                </article>
+                                <article class="catalog__card card-catalog">
+                                    <a href="#" class="card-catalog__image-ibg _icon-podolgrad_1">
+                                        <img src="@img/other-pics/2.jpg" alt="Подол Град" />
+                                    </a>
+                                    <ul class="card-catalog__list">
+                                        <li class="card-catalog__item _icon-location">Київ, Україна</li>
+                                        <li class="card-catalog__item _icon-building">Житловий комплекс</li>
+                                        <li class="card-catalog__item _icon-premium">Преміум-клас</li>
+                                        <li class="card-catalog__item _icon-time">Будується</li>
+                                    </ul>
+                                </article>
+                                <article class="catalog__card card-catalog">
+                                    <a href="#" class="card-catalog__image-ibg _icon-edeldorf_1">
+                                        <img src="@img/other-pics/3.jpg" alt="Edeldorf" />
+                                    </a>
+                                    <ul class="card-catalog__list">
+                                        <li class="card-catalog__item _icon-location">Київ, Україна</li>
+                                        <li class="card-catalog__item _icon-building">Житловий комплекс</li>
+                                        <li class="card-catalog__item _icon-premium">Преміум-клас</li>
+                                        <li class="card-catalog__item _icon-time">Будується</li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page__news news">
+                    <div class="news__content">
+                        <div class="news__top top-news">
+                            <div class="top-news__container">
+                                <article class="top-news__item item-news item-news_left">
+                                    <h2 class="item-news__title">Новини компанії</h2>
+                                    <a href="#" class="item-news__button button">Більше новин<span></span></a>
+                                </article>
+
+                                <div class="top-news__image-ibg top-news__image">
+                                    <img src="@img/other-pics/2.jpg" alt="будинок" />
+                                </div>
+
+                                <article class="top-news__item item-news item-news_right">
+                                    <h4 class="item-news__header"><a href="">Новини ЖК Vintage</a></h4>
+                                    <a href="#" class="item-news__text">
+                                        Компанія Development оголошує старт продажу восьмої черги житлового комплексу VINTAGE.
+                                    </a>
+                                    <div class="item-news__date">20.09.2019</div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="news__bottom bottom-news">
+                            <div
+                                data-da=".top-news__container, 991.98, last"
+                                class="bottom-news__image-ibg bottom-news__image-ibg_1"
+                            >
+                                <img src="@img/other-pics/4.jpg" alt="будинок" />
+                            </div>
+
+                            <article
+                                data-da=".top-news__container, 991.98, last"
+                                class="bottom-news__item item-news item-news_center"
+                            >
+                                <h4 class="item-news__header"><a href="#">Новини ЖК Edelweis</a></h4>
+                                <a href="#" class="item-news__text">
+                                    Компанія Development оголошує старт продажу восьмої черги житлового комплексу PODOL GRAD
+                                    VINTAGE.
+                                </a>
+                                <div class="item-news__date">20.10.2019</div>
+                            </article>
+
+                            <div
+                                data-da=".top-news__container, 991.98, last"
+                                class="bottom-news__image-ibg bottom-news__image-ibg_2"
+                            >
+                                <img src="@img/other-pics/3.jpg" alt="будинок" />
+                            </div>
                         </div>
                     </div>
                 </section>

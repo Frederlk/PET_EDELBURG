@@ -183,42 +183,6 @@
         }
     }
 
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @include adaptiveValue("gap", 70, 20, 1439.98, 767.98, 1);
-        @media (max-width: em(650)) {
-            flex-direction: column;
-        }
-    }
-
-    &__text {
-        @include adaptiveValue("padding-bottom", 70, 20, 1439.98, 767.98, 1);
-        @media (min-width: em(650)) {
-            flex: 0 0 percent(720, 1120);
-            @include adaptiveValue("padding-top", 60, 20, 1439.98, 767.98, 1);
-            @include adaptiveValue("padding-right", 70, 20, 1439.98, 767.98, 1);
-            border-right: rem(1) solid $primary;
-        }
-        @media (max-width: em(650)) {
-            border-bottom: rem(1) solid $primary;
-        }
-    }
-
-    &__side-text {
-        flex: 0 0 percent(250, 1120);
-        font-weight: 700;
-        font-size: rem(20);
-        line-height: math.div(32, 20);
-        letter-spacing: 8px;
-        text-transform: uppercase;
-        opacity: 0.2;
-        @media (max-width: em(1439.98)) {
-            flex: 1 1 auto;
-        }
-    }
-
     &__body {
         @include adaptiveValue("padding-top", 100, 50, 1439.98, 767.98, 1);
         @include adaptiveValue("padding-bottom", 120, 40, 1439.98, 767.98, 1);
@@ -445,3 +409,421 @@
         }
     }
 }
+
+//========================================================================================================================================================
+
+.innovations {
+    position: relative;
+    @include adaptiveValue("margin-bottom", 200, 100, 1439.98, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 50, 0, 1439.98, 767.98, 1);
+    &__container {
+        position: relative;
+    }
+
+    &__left-side {
+    }
+
+    &__content {
+        position: relative;
+        @media (max-width: em(1439.98)) {
+            padding: 0px rem(100) 0px rem(40);
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 2;
+        @media (min-width: $mobileSmall) {
+            @include adaptiveValue("padding-top", 90, 45, 1439.98, 767.98, 1);
+            @include adaptiveValue("padding-bottom", 40, 20, 1439.98, 767.98, 1);
+        }
+    }
+
+    &__text {
+        max-width: 50%;
+        @media (max-width: $mobile) {
+            max-width: 60%;
+        }
+        @media (max-width: em(520)) {
+            max-width: none;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 100, 50, 1439.98, 767.98, 1);
+        }
+    }
+
+    &__button {
+        @media (min-width: em(520)) {
+            min-width: rem(480);
+        }
+        @media (max-width: em(600)) {
+            width: 100%;
+        }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
+    }
+
+    &__phone {
+        position: absolute;
+        width: percent(400, 1120);
+        top: 0;
+        right: 0;
+        @media (max-width: em(1439.98)) {
+            right: rem(100);
+        }
+        @media (max-width: $mobile) {
+            right: 0;
+        }
+        @media (max-width: em(520)) {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__cards {
+        @include adaptiveValue("margin-bottom", 80, 40, 1439.98, 767.98, 1);
+        display: grid;
+        @include adaptiveValue("gap", 50, 25, 1439.98, 767.98, 1);
+        grid-template-columns: repeat(2, minmax(rem(240), 1fr));
+        @media (min-width: $tablet) {
+            grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+        }
+    }
+
+    &__card {
+    }
+
+    &__right-side {
+    }
+}
+.card-innovations {
+    @include adaptiveValue("min-height", 240, 180, 1439.98, 479.98, 1);
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    color: $white-1;
+    padding: rem(40);
+    @include adaptiveValue("padding", 40, 20, 1439.98, 767.98, 1);
+    &__icon {
+        @include adaptiveValue("margin-top", -20, 0, 1439.98, 767.98, 1);
+        @include adaptiveValue("margin-right", -10, 0, 1439.98, 767.98, 1);
+        font-size: rem(20);
+        text-align: right;
+        flex: 1 1 auto;
+    }
+
+    &__title {
+        margin-top: rem(10);
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+    }
+}
+
+//========================================================================================================================================================
+
+.catalog {
+    position: relative;
+    @include adaptiveValue("padding-bottom", 160, 80, 1439.98, 767.98, 1);
+    &__header {
+        background-color: $mainColor;
+    }
+
+    &__container {
+        &_header {
+            position: relative;
+            @include adaptiveValue("padding-top", 120, 60, 1439.98, 767.98, 1);
+            @include adaptiveValue("padding-bottom", 240, 120, 1439.98, 767.98, 1);
+        }
+    }
+
+    &__top {
+        color: $white-1;
+        @media (max-width: em(1439.98)) {
+            padding-left: rem(40);
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        @include adaptiveValue("margin-top", -160, -80, 1439.98, 767.98, 1);
+    }
+
+    &__cards {
+        @media (max-width: em(1439.98)) {
+            padding-left: rem(40);
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+
+        display: grid;
+        @include adaptiveValue("gap", 80, 50, 1739.98, 767.98, 1);
+        grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+    }
+
+    &__card {
+    }
+}
+.card-catalog {
+    &__image-ibg {
+        display: flex;
+        position: relative;
+        @include adaptiveValue("padding-bottom", 320, 250, 1439.98, 767.98, 1);
+        box-shadow: 0px rem(60) rem(40) rem(-40) rgba(0, 0, 0, 0.5);
+        @include adaptiveValue("margin-bottom", 50, 20, 1439.98, 767.98, 1);
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    opacity: 0.5;
+                }
+            }
+        }
+        &._icon-edelweiss_1 {
+            &::before {
+                font-size: rem(150);
+            }
+        }
+        &._icon-podolgrad_1 {
+            &::before {
+                font-size: rem(75);
+            }
+        }
+        &._icon-edeldorf_1 {
+            &::before {
+                font-size: rem(190);
+            }
+        }
+        &::before {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            color: $white-1;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $mainColor;
+            opacity: 0.6;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+        font-weight: 300;
+        line-height: math.div(28, 16);
+        color: rgba(0, 0, 0, 0.5);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 25, 10, 1439.98, 767.98, 1);
+        }
+        &::before {
+            color: $mainColor;
+            flex: 0 0 rem(24);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rem(20);
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.news {
+    &__left-side {
+    }
+
+    &__content {
+    }
+
+    &__top {
+    }
+
+    &__item {
+    }
+
+    &__bottom {
+    }
+}
+.top-news {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr rem(480) 1fr;
+        @media (max-width: $pc) {
+            grid-template-columns: 1fr rem(320) 1fr;
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "grid-1 grid-2"
+                "grid-3 grid-4"
+                "grid-5 grid-6";
+        }
+        @media (max-width: em(550)) {
+            display: block;
+        }
+    }
+
+    &__image-ibg {
+        @media (max-width: $tablet) {
+            grid-area: grid-2;
+            margin-right: rem(-15);
+        }
+        @include adaptiveValue("padding-bottom", 480, 320, 1439.98, 767.98, 1);
+        @media (max-width: em(550)) {
+            padding-bottom: rem(240);
+            margin: 0px rem(-15);
+        }
+    }
+
+    &__image {
+    }
+}
+.item-news {
+    @include adaptiveValue("padding-top", 80, 20, 1439.98, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 80, 20, 1439.98, 767.98, 1);
+    &_left {
+        @media (max-width: $tablet) {
+            grid-area: grid-1;
+        }
+        @media (min-width: em(550)) {
+            @include adaptiveValue("padding-right", 80, 20, 1439.98, 767.98, 1);
+        }
+    }
+    &_center {
+        @media (min-width: $tablet) {
+            @include adaptiveValue("padding-left", 80, 20, 1439.98, 767.98, 1);
+        }
+        @media (max-width: $tablet) {
+            grid-area: grid-5;
+        }
+        @media (min-width: em(550)) {
+            @include adaptiveValue("padding-right", 80, 20, 1439.98, 767.98, 1);
+        }
+    }
+    &_right {
+        @media (max-width: $tablet) {
+            grid-area: grid-4;
+        }
+        @media (min-width: em(550)) {
+            @include adaptiveValue("padding-left", 80, 20, 1439.98, 767.98, 1);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 40, 30);
+        line-height: math.div(56, 40);
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 56, 20, 1439.98, 767.98, 1);
+        }
+    }
+
+    &__button {
+        min-width: rem(240);
+        @media (max-width: $mobileSmall) {
+            min-width: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__header {
+        background-color: $mainColor;
+        color: $white-1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: rem(5) 0px;
+        min-height: rem(40);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 20, 1439.98, 991.98, 1);
+        }
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &__text {
+        display: inline-flex;
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 20, 1439.98, 991.98, 1);
+        }
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &__date {
+        font-weight: 300;
+        line-height: math.div(28, 16);
+        opacity: 0.5;
+    }
+}
+.bottom-news {
+    display: grid;
+    grid-template-columns: 1fr rem(480) 1fr;
+    @media (max-width: $pc) {
+        grid-template-columns: 1fr rem(320) 1fr;
+    }
+
+    &__image-ibg {
+        @include adaptiveValue("padding-bottom", 480, 320, 1439.98, 767.98, 1);
+        @media (max-width: em(550)) {
+            padding-bottom: rem(240);
+            margin: 0px rem(-15);
+        }
+        &_1 {
+            @media (max-width: $tablet) {
+                grid-area: grid-3;
+                margin-left: rem(-15);
+            }
+        }
+
+        &_2 {
+            @media (max-width: $tablet) {
+                grid-area: grid-6;
+                margin-right: rem(-15);
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
