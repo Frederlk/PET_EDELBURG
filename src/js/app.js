@@ -34,4 +34,4 @@ import * as flsScroll from "./files/scroll/scroll.js";
 flsScroll.pageNavigation();
 
 /* Динамический адаптив */
-import "./libs/dynamic_adapt.js";
+import "./files/dynamic_adapt.js";
