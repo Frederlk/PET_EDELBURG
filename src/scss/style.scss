@@ -55,11 +55,21 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
+    @include scrollbars(rem(17), $white-1, $dark-1, true);
     font-weight: 300;
     // Скролл заблокирован
     .lock & {
         overflow: hidden;
         touch-action: none;
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: rem(17);
+            top: 0;
+            right: 0;
+            background-color: $dark-1;
+        }
     }
     // Сайт загружен
     .loaded & {
