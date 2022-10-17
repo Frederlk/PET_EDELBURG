@@ -45,6 +45,7 @@ export let isMobile = {
         );
     },
 };
+
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {
     window.addEventListener("load", function () {
@@ -53,6 +54,12 @@ export function addLoadedClass() {
         }, 0);
     });
 }
+/* Добавление класса touch для HTML если браузер мобильный */
+export function addTouchClass() {
+    // Добавление класса _touch для HTML если браузер мобильный
+    isMobile.any() && document.documentElement.classList.add("touch");
+}
+
 // Учет плавающей панели на мобильных устройствах при 100vh
 export function fullVHfix() {
     const fullScreens = document.querySelectorAll("[data-fullscreen]");

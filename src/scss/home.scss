@@ -41,14 +41,6 @@
         }
     }
 
-    &__block {
-        @media (max-width: $mobile) {
-            &:not(:last-child) {
-                margin-bottom: rem(80);
-            }
-        }
-    }
-
     &__left-side {
         right: calc(100% - rem(15));
     }
@@ -66,6 +58,11 @@
 
     &__text {
         color: $white-1;
+        @media (max-width: $mobile) {
+            &:not(:last-child) {
+                margin-bottom: rem(80);
+            }
+        }
     }
 
     &__scroll {
