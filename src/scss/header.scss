@@ -13,7 +13,7 @@
         top: 0;
         right: -100%;
         background-color: transparent;
-        transition: all 0.3s ease 0s;
+        transition: right 0.3s ease 0s, background-color 0.3s ease 0s;
     }
     .menu-open & {
         &::after {
@@ -119,26 +119,26 @@
         right: -100%;
         background-color: $mainColor;
         overflow: hidden;
-        transition: all 0.3s ease 0s;
-        padding: 0;
+        transition: padding-bottom 0.3s ease 0s, padding-top 0.3s ease 0s, overflow 0.3s ease 0s,
+            right 0.3s ease 0s, height 0.3s ease 0s;
         .menu-open & {
             padding-bottom: rem(30);
             padding-top: rem(100);
-            @media (min-width: $mobile) {
-                padding-top: rem(160);
-            }
             overflow: auto;
             right: 0;
             height: 100%;
             .menu__list {
                 opacity: 1;
             }
+            @media (min-width: $mobile) {
+                padding-top: rem(160);
+            }
         }
     }
 
     &__list {
         opacity: 0;
-        transition: all 0.3s ease 0s;
+        transition: opacity 0.3s ease 0s;
         @media (min-width: $mobile) {
             padding: 0px rem(80);
         }
@@ -155,7 +155,7 @@
         font-size: rem(20);
         line-height: math.div(32, 20);
         color: $white-1;
-        transition: all 0.3s ease 0s;
+        transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
                 color: $primary;

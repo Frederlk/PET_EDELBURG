@@ -58,14 +58,14 @@
     }
 
     &__email {
-        transition: all 0.3s ease 0s;
+        display: inline-flex;
+        @include adaptiveValue("margin-bottom", 20, 10, 1439.98, 767.98, 1);
+        transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
                 color: $primary;
             }
         }
-        display: inline-flex;
-        @include adaptiveValue("margin-bottom", 20, 10, 1439.98, 767.98, 1);
     }
 
     &__phones {
@@ -78,7 +78,7 @@
     }
 
     &__phone-link {
-        transition: all 0.3s ease 0s;
+        transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
                 color: $primary;
@@ -96,7 +96,7 @@
     }
 
     &__text {
-        transition: all 0.3s ease 0s;
+        transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
                 color: $primary;
